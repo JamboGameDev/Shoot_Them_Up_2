@@ -22,9 +22,9 @@ void USTU_Fire_Service::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeM
 	if(Controller)
 	{
 		const auto WeaponComponent = STUUtils::GetSTUPlayerComponent<USTUWeaponComponent>(Controller->GetPawn());
-		HasAim ? WeaponComponent->StartFire() : WeaponComponent->StopFire();
+		HasAim ? WeaponComponent->StartFire() : WeaponComponent->StopFire(); // condition fire
 	}
 
-	Super::TickNode(OwnerComp, NodeMemory, DeltaSeconds);
+	Super::TickNode(OwnerComp, NodeMemory, DeltaSeconds); 
 }
 //---------------------------------------------------------------------------------------------------------------------
